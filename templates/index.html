@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome - StockTracker{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div>
+        <h1>Track the Market. Build your Portfolio.</h1>
+        <p>Save tickers, log trades, and see performance in one simple dashboard.</p>
+        <div class="cta-row">
+            <a class="btn" href="/register">Get started</a>
+            <a class="ghost" href="/dashboard">Open dashboard</a>
+        </div>
+    </div>
+    <div class="hero-card">
+        <h3>Portfolio Snapshot</h3>
+        <p class="muted">Live pricing + performance</p>
+        <div class="stat">
+            <span>Total Invested</span>
+            <strong>$12,450.00</strong>
+        </div>
+        <div class="stat">
+            <span>Current Value</span>
+            <strong>$13,120.50</strong>
+        </div>
+        <div class="stat">
+            <span>Return</span>
+            <strong class="up">+5.38%</strong>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Quick Stock Lookup (Public)</h2>
+    <form onsubmit="searchPublicStock(event)">
+        <input type="text" id="public-ticker" placeholder="Enter Ticker (e.g., AAPL)" required>
+        <button type="submit">Search Price</button>
+    </form>
+    
+    <div id="public-search-result" class="panel">
+        <p class="muted">Enter a ticker above to see details.</p>
+    </div>
+</section>
+
+<section class="features">
+    <div>
+        <h3>Track Holdings</h3>
+        <p class="muted">Add tickers to your watchlist and maintain positions with ease.</p>
+    </div>
+    <div>
+        <h3>Log Transactions</h3>
+        <p class="muted">Buy and sell actions update your holdings automatically.</p>
+    </div>
+    <div>
+        <h3>Simple Analytics</h3>
+        <p class="muted">See total invested, current value, and unrealized P&L.</p>
+    </div>
+</section>
+{% endblock %}
