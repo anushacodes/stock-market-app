@@ -8,3 +8,5 @@ wheels/
 
 # Virtual environments
 .venv
+new_readme.md
+.env
